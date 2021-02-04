@@ -1,0 +1,25 @@
+# Sort by file size
+alias lt='ls --human-readable --size -1 -S --classify' 
+
+# View only mounted drives
+alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort" 
+
+# Find a command in the grep history
+alias gh='history|grep' 
+
+# Sort by modification time
+alias left='ls -t -1' #
+
+# Count files
+alias count='find . -type f | wc -l'
+
+# Copy with progress bar
+alias cpv='rsync -ah --info=progress2'
+
+# Searches for a word in the list of previously used commands
+alias hgrep='fc -El 0 | grep'
+
+# Display the ascending sorted size of files at depth 1 in current location in human-readable form
+alias dufs='du -hd1 -- * | sort -h'
+
+
