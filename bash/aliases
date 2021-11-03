@@ -22,4 +22,14 @@ alias hgrep='fc -El 0 | grep'
 # Display the ascending sorted size of files at depth 1 in current location in human-readable form
 alias dufs='du -hd1 -- * | sort -h'
 
+# Remove old snaps
+# alias remove-old-snaps='sudo bash $HOME/Code/configs/bash/remove-old-snaps.sh'
 
+# Fix time modification between windows and linux
+alias fix-time-modification='timedatectl set-local-rtc 1 --adjust-system-clock'
+
+# Get ip addresses in a neat format
+ip -c -s -h a
+
+# Make directories with range expansion
+mkdir The\ Big\ Bang\ Theory\ S{01..12}
